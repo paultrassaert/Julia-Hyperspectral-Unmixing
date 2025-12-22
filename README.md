@@ -83,9 +83,9 @@ By utilizing the `Distributed` module, we achieved significant speedups on multi
 
 ## Authors
 
+* **Paul Trassaert**
 * **Mohamed Aziz Jallouli**
 * **Nathan Ygé**
-* **Paul Trassaert**
 
 ---
 *This project was developed as part of the Numerical Methods curriculum at IMT Atlantique.*
