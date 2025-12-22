@@ -72,14 +72,11 @@ The project is written in **Julia** (v1.6+). The following packages are required
 ### 1. Reconstruction Quality
 The algorithm successfully recovers the spectral signatures of the ground truth materials without prior knowledge. The abundance maps below show the spatial distribution of the identified materials.
 
-![Abundance Maps](assets/abundance_maps.png)
-*(Figure: Reconstructed abundance maps for the primary endmembers)*
+
 
 ### 2. Computational Speedup
 By utilizing the `Distributed` module, we achieved significant speedups on multi-core architectures. The `pmap` approach demonstrated superior scalability compared to the sequential baseline.
 
-![Performance Graph](assets/performance_graph.png)
-*(Figure: Execution time comparison between Sequential and Parallel implementations)*
 
 ## Authors
 
