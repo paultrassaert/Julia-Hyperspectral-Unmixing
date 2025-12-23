@@ -67,15 +67,26 @@ The project is written in **Julia** (v1.6+). The following packages are required
     Pkg.instantiate() # Install dependencies
     ```
 
-## Results and Performance
+## Results & Performance
 
-### 1. Reconstruction Quality
-The algorithm successfully recovers the spectral signatures of the ground truth materials without prior knowledge. The abundance maps below show the spatial distribution of the identified materials.
+### 1. HPC Acceleration (Speedup x12)
+The optimization process (Projected Gradient Descent) is computationally intensive. By leveraging Julia's **Distributed Computing** capabilities (`pmap` vs sequential loop), we achieved a massive reduction in computation time.
 
+* **Sequential Time:** ~321 seconds
+* **Parallel Time:** ~25 seconds
+* **Speedup:** **12.7x**
 
+![Performance Graph](assets/performance_graph.png)
 
-### 2. Computational Speedup
-By utilizing the `Distributed` module, we achieved significant speedups on multi-core architectures. The `pmap` approach demonstrated superior scalability compared to the sequential baseline.
+### 2. Spectral Reconstruction Accuracy
+The algorithm successfully recovers the underlying physical structure of the data. The plot below compares the **Ground Truth** (actual material signature) with the **Reconstructed Model**, showing high accuracy.
+
+![Spectral Reconstruction](assets/spectral_reconstruction.png)
+
+### 3. Material Mapping (Abundance Maps)
+Below are the generated heatmaps showing the spatial distribution of different materials identified in the scene. The algorithm correctly separates distinct features (e.g., roads, fields).
+
+![Abundance Maps](assets/abundance_maps.png).
 
 
 ## Authors
